@@ -26,7 +26,7 @@
 </script>
 
 <div style:height="100vh" class="test">
-	<SvelteFlow proOptions={{ hideAttribution: true }} bind:nodes bind:edges>
+	<SvelteFlow proOptions={{ hideAttribution: true }} bind:nodes bind:edges fitView>
 		<Controls />
 		<Background />
 		<MiniMap />
@@ -35,17 +35,12 @@
 
 <style>
 	:global(.svelte-flow) {
-		--xy-node-background-color-default: #dda;
-		--xy-node-border-default: 15px solid #1a192b;
-		--xy-edge-stroke-width-default: 10px;
-		--xy-node-color-default: #dda;
+		--xy-node-color-default: #000;
+		--xy-node-background-color-default: #f0f0c4;
 	}
 
-	:global(.svelte-flow__handle) {
-		opacity: 0;
-	}
-
-	:global(.svelte-flow__node-default) {
-		padding: 20px;
+	:global(.svelte-flow__node) {
+		min-width: 10px;
+		width: auto;
 	}
 </style>
