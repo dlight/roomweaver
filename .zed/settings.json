@@ -1,0 +1,21 @@
+{
+	"lsp": {
+		"vscode-css-language-server": {
+			"settings": {
+				"css": {
+					"lint": {
+						// Workaround for this LSP conflict
+						// https://github.com/zed-industries/zed/issues/38596#issuecomment-3321565054
+						// https://github.com/zed-industries/zed/issues/38352
+						//
+						// Some years ago VSCode also had this issue...
+						// ... but apparently the PostCSS extension fixed it? Or maybe not
+						// https://stackoverflow.com/questions/76776910/unknown-at-rule-tailwind-cssunknownatrules-tailwind-error
+						// https://github.com/tailwindlabs/tailwindcss/discussions/5258#discussioncomment-13361030
+						"unknownAtRules": "ignore"
+					}
+				}
+			}
+		}
+	}
+}
