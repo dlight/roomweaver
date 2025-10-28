@@ -1,16 +1,31 @@
 <script lang="ts">
-	import { SvelteFlow, Controls, Background, MiniMap, type Node, type Edge } from '@xyflow/svelte';
-
+	import {
+		SvelteFlow,
+		Controls,
+		Background,
+		MiniMap,
+		type Node,
+		type Edge,
+		type NodeTypes
+	} from '@xyflow/svelte';
 	import '@xyflow/svelte/dist/style.css';
+
+	import Ability from '$lib/components/Ability.svelte';
+
+	const nodeTypes: NodeTypes = {
+		ability: Ability
+	};
 
 	let nodes = $state.raw<Node[]>([
 		{
 			id: '1',
+			type: 'ability',
 			data: { label: 'Hello' },
 			position: { x: 0, y: 0 }
 		},
 		{
 			id: '2',
+			type: 'ability',
 			data: { label: 'World' },
 			position: { x: 100, y: 150 }
 		}
@@ -26,21 +41,9 @@
 </script>
 
 <div style:height="100vh" class="test">
-	<SvelteFlow proOptions={{ hideAttribution: true }} bind:nodes bind:edges fitView>
+	<SvelteFlow proOptions={{ hideAttribution: true }} {nodeTypes} bind:nodes bind:edges fitView>
 		<Controls />
 		<Background />
 		<MiniMap />
 	</SvelteFlow>
 </div>
-
-<style>
-	:global(.svelte-flow) {
-		--xy-node-color-default: #000;
-		--xy-node-background-color-default: #f0f0c4;
-	}
-
-	:global(.svelte-flow__node) {
-		min-width: 10px;
-		width: auto;
-	}
-</style>
