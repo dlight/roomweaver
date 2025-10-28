@@ -20,20 +20,21 @@
 		{
 			id: '1',
 			type: 'ability',
-			data: { label: 'Jump', type: 'move' },
+			data: { name: 'Dash', type: 'move' },
 			position: { x: 0, y: 0 }
 		},
 		{
 			id: '2',
 			type: 'ability',
-			data: { label: 'Dash', type: 'move' },
-			position: { x: 150, y: 100 }
+			data: { name: 'Ice Gun', type: 'weapon' },
+
+			position: { x: 60, y: 30 }
 		},
 		{
 			id: '3',
 			type: 'ability',
-			data: { label: 'Ice Gun', type: 'attack' },
-			position: { x: 300, y: 100 }
+			data: { name: 'Vanish', type: 'spell' },
+			position: { x: 140, y: 30 }
 		}
 	]);
 

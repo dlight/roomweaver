@@ -50,6 +50,7 @@
 	},
 	"dependencies": {
 		"@xyflow/svelte": "^1.4.0",
-		"typia": "^9.7.2"
+		"typia": "^9.7.2",
+		"ts-pattern": "^5.9.0"
 	}
 }
