@@ -1,9 +1,10 @@
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'vitest/config';
 import { sveltekit } from '@sveltejs/kit/vite';
+import UnpluginTypia from '@ryoppippi/unplugin-typia/vite';
 
 export default defineConfig({
-	plugins: [tailwindcss(), sveltekit()],
+	plugins: [tailwindcss(), sveltekit(), UnpluginTypia()],
 	test: {
 		expect: { requireAssertions: true },
 		projects: [
